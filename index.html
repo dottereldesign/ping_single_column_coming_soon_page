@@ -24,7 +24,7 @@
       <h1>We are launching <span>soon!</span></h1>
       <p>Subscribe and get notified</p>
 
-      <form id="signupForm">
+      <form id="signupForm" novalidate>
         <input
           type="email"
           id="emailInput"
@@ -32,6 +32,7 @@
           placeholder="Your email address..."
           required
         />
+        <div class="error-email">Please provide a valid email address</div>
         <button type="submit">Notify Me</button>
       </form>
 
@@ -44,16 +45,17 @@
 
     <footer>
       <div class="footer_icons">
-        <div class="footer_icons-wrapper">
+        <a href="#">
           <i class="fa-brands fa-facebook-f"></i>
-        </div>
+        </a>
 
-        <div class="footer_icons-wrapper">
+        <a href="#">
           <i class="fa-brands fa-twitter"> </i>
-        </div>
-        <div class="footer_icons-wrapper">
+        </a>
+
+        <a href="#">
           <i class="fa-brands fa-instagram"></i>
-        </div>
+        </a>
       </div>
 
       <small>&copy; Copyright Ping. All rights reserved.</small>

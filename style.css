@@ -154,23 +154,25 @@ footer {
   margin: 0 16px 0 16px;
 }
 
-.footer_icons-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--fs-700);
-  height: var(--fs-700);
-  border-radius: 2em;
-  border: 1px solid var(--clr-primary-100);
+.footer_icons a:nth-child(2) {
+  margin: 0 8px;
 }
 
 i {
   font-size: var(--fs-500);
-  display: flex;
-
   text-align: center;
-  line-height: 1.2 !important;
+  line-height: 1.7 !important;
   color: var(--clr-primary-100);
+  width: var(--fs-800);
+  height: var(--fs-800);
+  border-radius: 2em;
+  border: 1px solid var(--clr-primary-100);
+}
+
+@media (min-width: 570px) {
+  i {
+    line-height: 1.9 !important;
+  }
 }
 
 i:hover {
@@ -180,7 +182,7 @@ i:hover {
 
 footer small {
   font-size: var(--fs-400);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
   color: var(--clr-neutral-100);
   margin-top: 32px;
 }
@@ -241,7 +243,7 @@ button:hover {
     justify-content: center;
     margin-top: 32px;
     width: min(100%, 300px);
-    gap: 16px;
+    column-gap: 16px;
   }
 
   input[type="email"] {
@@ -250,5 +252,28 @@ button:hover {
 
   button {
     margin-top: 0;
+    grid-column: 2/2;
+    grid-row: 1;
   }
+
+  .error-email {
+    padding: 4px 0 0 32px;
+    grid-column: 1/1;
+    opacity: 90%;
+  }
+}
+
+.error-email {
+  color: var(--clr-primary-300);
+  font-size: var(--fs-400);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  display: none; /* Initially hide the error message */
+  margin-top: 4px;
+}
+
+.input-error {
+  border-color: var(
+    --clr-primary-300
+  ); /* Change border color to indicate error */
 }
