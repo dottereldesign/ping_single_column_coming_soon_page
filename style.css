@@ -15,14 +15,15 @@
   --fw-bold: 700;
   --fw-extra-bold: 800;
 
-  --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
-  --fs-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
-  --fs-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
-  --fs-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
-  --fs-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
-  --fs-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
-  --fs-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
-  --fs-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+  --fs-400: clamp(0.8594rem, 0.8177rem + 0.2083vw, 1rem);
+  --fs-500: clamp(1.0313rem, 0.9664rem + 0.3241vw, 1.25rem);
+  --fs-600: clamp(1.2375rem, 1.1412rem + 0.4815vw, 1.5625rem);
+  --fs-700: clamp(1.485rem, 1.3463rem + 0.6935vw, 1.9531rem);
+  --fs-800: clamp(1.7819rem, 1.5865rem + 0.9769vw, 2.4413rem);
+  --fs-900: clamp(2.1381rem, 1.8674rem + 1.3537vw, 3.0519rem);
+  --fs-1000: clamp(2.5663rem, 2.1963rem + 1.85vw, 3.815rem);
+  --fs-1100: clamp(3.0794rem, 2.579rem + 2.5019vw, 4.7681rem);
+  --fs-1200: clamp(3.695rem, 3.0237rem + 3.3565vw, 5.9606rem);
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -67,7 +68,6 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
 }
 /* Inherit fonts for inputs and buttons */
@@ -133,6 +133,7 @@ p {
 
 .illustration {
   margin-top: 80px;
+  width: min(100%, 800px);
 }
 
 footer {
@@ -154,17 +155,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--fs-700);
+  height: var(--fs-700);
+  border-radius: 2em;
+  border: 1px solid var(--clr-primary-100);
 }
 
 i {
-  font-size: 1.5em;
-  width: 1.5em;
-  height: 1.5em;
+  font-size: var(--fs-500);
+  display: flex;
+
   text-align: center;
-  line-height: 1.5em !important;
+  line-height: 1.2 !important;
   color: var(--clr-primary-100);
-  border-radius: 2em;
-  border: 1px solid var(--clr-primary-100);
 }
 
 i:hover {
@@ -188,4 +191,37 @@ footer small {
     max-width: 1110px;
     margin: 0 auto;
   }
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  width: min(100%, 300px);
+}
+
+input[type="email"] {
+  padding: 12px 32px;
+  margin-bottom: 10px;
+  border: 1px solid var(--clr-primary-200);
+  border-radius: 25px;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-regular);
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: var(--clr-primary-100);
+  border: none;
+  border-radius: 25px;
+  font-size: var(--fs-500);
+  cursor: pointer;
+  margin-top: 4px;
+  font-weight: var(--fw-medium);
+  box-shadow: 0 2px 6px var(--clr-primary-100); /* Light box shadow */
+}
+
+button:hover {
+  background-color: #0056b3;
 }

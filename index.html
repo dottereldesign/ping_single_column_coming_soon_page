@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping single column coming soon page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c627734373.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ping single column coming soon page</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/c627734373.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <main>
+      <img class="logo" src="images/logo.svg" alt="Ping logo." />
+      <h2>We are launching <span>soon!</span></h2>
+      <p>Subscribe and get notified</p>
 
-<body>
-  <main>
-    <img class="logo" src="images/logo.svg" alt="Ping logo.">
-    <h2>We are launching <span>soon!</span></h2>
-    <p>Subscribe and get notified</p>
+      <form id="signupForm">
+        <input
+          type="email"
+          id="emailInput"
+          name="email"
+          placeholder="Your email address..."
+          required
+        />
+        <button type="submit">Notify Me</button>
+      </form>
 
-    <!-- Javascript -->
-    <!-- <div class="form_container">
-      <form action=""></form>
-      <button>Notify Me</button>
-    </div> -->
+      <img
+        class="illustration"
+        src="images/illustration-dashboard.png"
+        alt="Web app illustration of Ping software."
+      />
+    </main>
 
-    <img class="illustration" src="images/illustration-dashboard.png" alt="Web app illustration of Ping software.">
-  </main>
+    <footer>
+      <div class="footer_icons">
+        <div class="footer_icons-wrapper">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
 
-  <footer>
-    <div class="footer_icons">
-      <div class="footer_icons-wrapper">
-        <i class="fa-brands fa-facebook-f"></i>
+        <div class="footer_icons-wrapper">
+          <i class="fa-brands fa-twitter"> </i>
+        </div>
+        <div class="footer_icons-wrapper">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
       </div>
 
-      <div class="footer_icons-wrapper">
-        <i class="fa-brands fa-twitter">
-        </i>
-      </div>
-      <div class="footer_icons-wrapper"><i class="fa-brands fa-instagram"></i></div>
-    </div>
+      <small>&copy; Copyright Ping. All rights reserved.</small>
+    </footer>
 
-    <small>&copy; Copyright Ping. All rights reserved.</small>
-  </footer>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
