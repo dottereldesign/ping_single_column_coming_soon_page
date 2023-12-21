@@ -64,6 +64,7 @@ body {
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
@@ -86,7 +87,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -231,6 +234,26 @@ button:hover {
   background-color: #0056b3;
 }
 
+#emailInput::-webkit-input-placeholder {
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-light);
+}
+
+#emailInput::-moz-placeholder {
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-light);
+}
+
+#emailInput:-ms-input-placeholder {
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-light);
+}
+
+#emailInput::-ms-input-placeholder {
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-light);
+}
+
 #emailInput::placeholder {
   color: var(--clr-neutral-300);
   font-weight: var(--fw-light);
@@ -243,6 +266,7 @@ button:hover {
     justify-content: center;
     margin-top: 32px;
     width: min(100%, 300px);
+    -moz-column-gap: 16px;
     column-gap: 16px;
   }
 
